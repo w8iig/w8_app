@@ -1,5 +1,5 @@
-﻿// For an introduction to the Grid template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkID=232446
+﻿// For an introduction to the Split template, see the following documentation:
+// http://go.microsoft.com/fwlink/?LinkID=232447
 (function () {
     "use strict";
 

@@ -47,9 +47,7 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    
     <PackageCertificateKeyFile>w8_app_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -63,19 +61,17 @@
     <Content Include="js\data.js" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
-    <Content Include="pages\itemDetail\itemDetail.css" />
-    <Content Include="pages\itemDetail\itemDetail.html" />
-    <Content Include="pages\itemDetail\itemDetail.js" />
-    <Content Include="pages\groupDetail\groupDetail.css" />
-    <Content Include="pages\groupDetail\groupDetail.html" />
-    <Content Include="pages\groupDetail\groupDetail.js" />
-    <Content Include="pages\groupedItems\groupedItems.css" />
-    <Content Include="pages\groupedItems\groupedItems.html" />
-    <Content Include="pages\groupedItems\groupedItems.js" />
+    <Content Include="pages\items\items.css" />
+    <Content Include="pages\items\items.html" />
+    <Content Include="pages\items\items.js" />
+    <Content Include="pages\boards\boards.css" />
+    <Content Include="pages\boards\boards.html" />
+    <Content Include="pages\boards\boards.js" />
+    <Content Include="pages\split\split.css" />
+    <Content Include="pages\split\split.html" />
+    <Content Include="pages\split\split.js" />
     <Content Include="default.html" />
-    
     <None Include="w8_app_TemporaryKey.pfx" />
-    
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
