@@ -1,157 +1,58 @@
 ﻿(function () {
     "use strict";
-    var dataresponse = "";
-    var list = new WinJS.Binding.List();
+    
+    var serverAddress = '192.168.6.108:3000';
+    var collectionsList = new WinJS.Binding.List();
+    var boardsListsArray = [];
 
-    sendRequest("http://192.168.33.35:3000/api/collections", callback, "abc");
-    var groupedItems = list.createGrouped(
-        function groupKeySelector(item) { return item.group.key; },
-        function groupDataSelector(item) { return item.group; }
-    );
+    var collectionsFetched = 0;
+    var broadsFetchedArray = [];
 
-    // TODO: Replace the data with your real data.
-    // You can add data from asynchronous sources whenever it becomes available.
-    function callback(req) {
-        dataresponse = req.responseText;
-        generateSampleData().forEach(function (item) {
-            list.push(item);
+    function getCollectionsList() {
+        if (collectionsFetched == 0) {
+            fetchJson('http://' + serverAddress + '/api/collections').then(function (collections) {
+                for (var i = 0; i < collections.length; i++) {
+                    collectionsList.push(collections[i]);
+                }
+            });
+
+            collectionsFetched = 1;
+        }
+
+        return collectionsList;
+    }
+
+    function getBoardsList(collectionId) {
+        if (!boardsListsArray[collectionId]) {
+            boardsListsArray[collectionId] = new WinJS.Binding.List();
+            broadsFetchedArray[collectionId] = 0;
+        }
+
+        if (broadsFetchedArray[collectionId] == 0) {
+            fetchJson('http://' + serverAddress + '/api/collections/' + collectionId).then(function (collection) {
+                for (var i = 0; i < collection.boards.length; i++) {
+                    boardsListsArray[collectionId].push(collection.boards[i]);
+                }
+            });
+
+            broadsFetchedArray[collectionId] = 1
+        }
+
+        return boardsListsArray[collectionId];
+    }
+
+    function fetchJson(url) {
+        return WinJS.xhr({
+            url: url,
+            headers: { "If-Modified-Since": "Mon, 27 Mar 1972 00:00:00 GMT" }
+        }).then(function (response) {
+            var json = JSON.parse(response.responseText);
+            return json;
         });
     }
-    function sendRequest(url, callback, postData) {
-        var req = new XMLHttpRequest();
 
-        var method = (postData) ? "POST" : "GET";
-        req.open("GET", url, true);
-        req.setRequestHeader('User-Agent', 'XMLHTTP/1.0');
-        if (postData)
-            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        req.onreadystatechange = function () {
-            if (req.readyState != 4) return;
-            if (req.status != 200 && req.status != 304) {
-                //			alert('HTTP error ' + req.status);
-
-                return;
-            }
-            callback(req);
-        }
-        if (req.readyState == 4) return;
-
-        req.send(postData);
-
-
-    }
-    var XMLHttpFactories = [
-        function () { return new XMLHttpRequest() },
-
-    ];
-
-    function createXMLHTTPObject() {
-        var xmlhttp = false;
-        for (var i = 0; i < XMLHttpFactories.length; i++) {
-            try {
-                xmlhttp = XMLHttpFactories[i]();
-            }
-            catch (e) {
-                continue;
-            }
-            break;
-        }
-        return xmlhttp;
-    }
-    function handleRequest(req) {
-        var writeroot = [];
-        writeroot.innerHTML = req.responseText;
-    }
-    function extractData(response) {
-        var call = JSON.parse(response);
-
-
-        return call;
-    }
     WinJS.Namespace.define("Data", {
-        items: groupedItems,
-        groups: groupedItems.groups,
-        getItemReference: getItemReference,
-        getItemsFromGroup: getItemsFromGroup,
-        resolveGroupReference: resolveGroupReference,
-        resolveItemReference: resolveItemReference
+        collections: getCollectionsList,
+        boards: getBoardsList
     });
-
-    // Get a reference for an item, using the group key and item title as a
-    // unique reference to the item that can be easily serialized.
-    function getItemReference(item) {
-        return [item.group.key, item.title];
-    }
-
-    // This function returns a WinJS.Binding.List containing only the items
-    // that belong to the provided group.
-    function getItemsFromGroup(group) {
-        return list.createFiltered(function (item) { return item.group.key === group.key; });
-    }
-
-    // Get the unique group corresponding to the provided group key.
-    function resolveGroupReference(key) {
-        for (var i = 0; i < groupedItems.groups.length; i++) {
-            if (groupedItems.groups.getAt(i).key === key) {
-                return groupedItems.groups.getAt(i);
-            }
-        }
-    }
-
-    // Get a unique item from the provided string array, which should contain a
-    // group key and an item title.
-    function resolveItemReference(reference) {
-        for (var i = 0; i < groupedItems.length; i++) {
-            var item = groupedItems.getAt(i);
-            if (item.group.key === reference[0] && item.title === reference[1]) {
-                return item;
-            }
-        }
-    }
-
-
-    // Returns an array of sample data that can be added to the application's
-    // data list. 
-    function generateSampleData() {
-
-        var itemContent = "<p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat</p><p>Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat";
-        var itemDescription = "Item Description: Pellentesque porta mauris quis interdum vehicula urna sapien ultrices velit nec venenatis dui odio in augue cras posuere enim a cursus convallis neque turpis malesuada erat ut adipiscing neque tortor ac erat";
-        var groupDescription = "Group Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante";
-
-        // These three strings encode placeholder images. You will want to set the
-        // backgroundImage property in your real data to be URLs to images.
-        var darkGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY3B0cPoPAANMAcOba1BlAAAAAElFTkSuQmCC";
-        var lightGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY7h4+cp/AAhpA3h+ANDKAAAAAElFTkSuQmCC";
-        var mediumGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g8dcZ/AAY/AsAlWFQ+AAAAAElFTkSuQmCC";
-
-        // Each of these sample groups must have a unique key to be displayed
-        // separately.
-        
-        
-        
-        var sampleGroups = [
-
-            { key: extractData(dataresponse)[0].collectionId, title: extractData(dataresponse)[0].collectionName, subtitle: "Start discovering our play zone", backgroundImage: darkGray, description: groupDescription },
-            { key: extractData(dataresponse)[1].collectionId, title: extractData(dataresponse)[1].collectionName, subtitle: "Start discovering out work zone", backgroundImage: lightGray, description: groupDescription },
-
-        ];
-
-        // Each of these sample items should have a reference to a particular
-        // group.
-        var sampleItems = [
-            { group: sampleGroups[0], title: "Item Title: 1", subtitle: "Item Subtitle: 1", description: itemDescription, content: itemContent, backgroundImage: lightGray },
-            { group: sampleGroups[0], title: "Item Title: 2", subtitle: "Item Subtitle: 2", description: itemDescription, content: itemContent, backgroundImage: darkGray },
-            { group: sampleGroups[0], title: "Item Title: 3", subtitle: "Item Subtitle: 3", description: itemDescription, content: itemContent, backgroundImage: mediumGray },
-            { group: sampleGroups[0], title: "Item Title: 4", subtitle: "Item Subtitle: 4", description: itemDescription, content: itemContent, backgroundImage: darkGray },
-            { group: sampleGroups[0], title: "Item Title: 5", subtitle: "Item Subtitle: 5", description: itemDescription, content: itemContent, backgroundImage: mediumGray },
-
-            { group: sampleGroups[1], title: "Item Title: 1", subtitle: "Item Subtitle: 1", description: itemDescription, content: itemContent, backgroundImage: darkGray },
-            { group: sampleGroups[1], title: "Item Title: 2", subtitle: "Item Subtitle: 2", description: itemDescription, content: itemContent, backgroundImage: mediumGray },
-            { group: sampleGroups[1], title: "Item Title: 3", subtitle: "Item Subtitle: 3", description: itemDescription, content: itemContent, backgroundImage: lightGray },
-
-
-        ];
-
-        return sampleItems;
-    }
 })();
