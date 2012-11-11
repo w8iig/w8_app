@@ -11,8 +11,10 @@
     function getCollectionsList() {
         if (collectionsFetched == 0) {
             fetchJson('http://' + serverAddress + '/api/collections').then(function (collections) {
-                for (var i = 0; i < collections.length; i++) {
-                    collectionsList.push(collections[i]);
+                if (collections != null) {
+                    for (var i = 0; i < collections.length; i++) {
+                        collectionsList.push(collections[i]);
+                    }
                 }
             });
 
@@ -30,8 +32,10 @@
 
         if (broadsFetchedArray[collectionId] == 0) {
             fetchJson('http://' + serverAddress + '/api/collections/' + collectionId).then(function (collection) {
-                for (var i = 0; i < collection.boards.length; i++) {
-                    boardsListsArray[collectionId].push(collection.boards[i]);
+                if (collection != null && collection.boards) {
+                    for (var i = 0; i < collection.boards.length; i++) {
+                        boardsListsArray[collectionId].push(collection.boards[i]);
+                    }
                 }
             });
 
@@ -45,9 +49,11 @@
         return WinJS.xhr({
             url: url,
             headers: { "If-Modified-Since": "Mon, 27 Mar 1972 00:00:00 GMT" }
-        }).then(function (response) {
-            var json = JSON.parse(response.responseText);
+        }).then(function (request) {
+            var json = JSON.parse(request.responseText);
             return json;
+        }, function (request) {
+            return null;
         });
     }
 

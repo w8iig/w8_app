@@ -3,6 +3,7 @@
 
     var appViewState = Windows.UI.ViewManagement.ApplicationViewState;
     var ui = WinJS.UI;
+    var output;
 
     ui.Pages.define("/pages/collections/collections.html", {
         ready: function (element, options) {
@@ -16,6 +17,9 @@
 
             this._initializeLayout(this.listView, Windows.UI.ViewManagement.ApplicationView.value);
             this.listView.element.focus();
+
+            output = document.getElementById('output');
+            WinJS.Resources.processAll(output);
         },
 
         updateLayout: function (element, viewState, lastViewState) {

@@ -5,6 +5,7 @@
 
     var appViewState = Windows.UI.ViewManagement.ApplicationViewState;
     var ui = WinJS.UI;
+    var output;
 
     WinJS.UI.Pages.define("/pages/boards/boards.html", {
         ready: function (element, options) {
@@ -20,6 +21,9 @@
 
             this._initializeLayout(this.listView, Windows.UI.ViewManagement.ApplicationView.value);
             this.listView.element.focus();
+
+            output = document.getElementById('output');
+            WinJS.Resources.processAll(output);
         },
 
         updateLayout: function (element, viewState, lastViewState) {
