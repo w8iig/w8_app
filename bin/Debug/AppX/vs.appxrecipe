@@ -5,7 +5,7 @@
     <WindowsUser>Shrimp</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>0D24E659DA158E06BDEBF513AF7A99263FD17369E041E583A402A634DA6FCC04</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>F599633DCF43895C5343D760F1A1F8ECFCD15854ED353E5D08262042789C502D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1164f4ca-2bcc-4ce5-a797-0b4fd2d5b4b6_1.0.0.0_neutral__m59fryp8n8ksr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1164f4ca-2bcc-4ce5-a797-0b4fd2d5b4b6_m59fryp8n8ksr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>1164f4ca-2bcc-4ce5-a797-0b4fd2d5b4b6</RegisteredPackageID>
@@ -16,7 +16,7 @@
     <AppXManifest Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-11T09:16:57.430</Modified>
+      <Modified>2012-11-11T10:47:03.095</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -294,7 +294,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\data.js">
       <PackagePath>js\data.js</PackagePath>
-      <Modified>2012-11-11T09:23:09.597</Modified>
+      <Modified>2012-11-11T10:46:23.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\default.js">
       <PackagePath>js\default.js</PackagePath>
@@ -302,7 +302,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\jquery-1.8.2.js">
       <PackagePath>js\jquery-1.8.2.js</PackagePath>
-      <Modified>2012-11-11T08:56:13.050</Modified>
+      <Modified>2012-11-11T10:46:23.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\jquery-ui.js">
       <PackagePath>js\jquery-ui.js</PackagePath>
@@ -322,11 +322,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\board_detail.js">
       <PackagePath>pages\board_detail\board_detail.js</PackagePath>
-      <Modified>2012-11-11T09:32:35.997</Modified>
+      <Modified>2012-11-11T10:46:23.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\echo.js">
       <PackagePath>pages\board_detail\echo.js</PackagePath>
-      <Modified>2012-11-11T08:56:13.128</Modified>
+      <Modified>2012-11-11T10:46:23.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\map.js">
       <PackagePath>pages\board_detail\map.js</PackagePath>
@@ -350,7 +350,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\board_detail.html">
       <PackagePath>pages\board_detail\board_detail.html</PackagePath>
-      <Modified>2012-11-11T09:32:20.027</Modified>
+      <Modified>2012-11-11T10:46:23.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\map.html">
       <PackagePath>pages\board_detail\map.html</PackagePath>
@@ -370,7 +370,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-11-11T09:16:57.367</Modified>
+      <Modified>2012-11-11T10:46:23.855</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

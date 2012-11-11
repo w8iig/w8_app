@@ -5,10 +5,12 @@
 
     var lastCapture = null;
     var counter = 0;
+
     //Drop this after the line: var activation = Windows.ApplicationModel.Activation;
     var lastPosition = null;
     var serverAddress = '192.168.33.35:3000';
     var map_open = false;
+    var list_html_element = new Array();
 
     var socket = io.connect('http://192.168.9.111:3000/media');
     socket.on('connect', function () {
@@ -89,6 +91,32 @@
             var location = { latitude: data.x, longitude: data.y };
             callFrameScript(document.frames["map"], "pinLocation",
                 [data.x, data.y]);
+        } else {
+            var found = false;
+            for (var i = 0; i < list_html_element.length; i++) {
+                if ((list_html_element[i].uinqueId != null) && (list_html_element[i].uinqueId == data.uniqueId)) {
+                    list_html_element[i].control.style.top = data.y;
+                    list_html_element[i].control.style.left = data.x;
+                    found = true;
+                    break;
+                }
+            }
+            if(found == false){
+                var e = new HtmlElement();
+                e.counter = data.counter;
+                e.uuid = data.uinqueId;
+                if(data.type == "image"){
+                    var img = document.createElement('IMG');
+                    img.src = data.src;
+                    img.width = data.width;
+                    img.height = data.height;
+                    img.style.left = x;
+                    img.style.top = y;
+                    document.getElementById("img_board").appendChild(img);
+                    e.control = img;
+                }
+                list_html_element[list_html_element.length] = e;
+            }
         }
     });
 
@@ -153,11 +181,15 @@
                     }
                 });
 
-                var url = URL.createObjectURL(file, { oneTimeOnly: true });
-                img.src = url;
-                document.getElementById('media_board').appendChild(img);
+                document.getElementById('img_board').appendChild(img);
 
-                uploadImage(file);
+                uploadImage(file, img);
+
+                var e = new HtmlElement();
+                e.control = img;
+                e.counter = counter;
+                list_html_element[list_html_element.length] = e;
+                counter++;
             } else {
                 // The picker was dismissed with no selected file
             }
@@ -185,18 +217,22 @@
                     }
                 });
                 
-                var url = URL.createObjectURL(capturedFile, { oneTimeOnly: true });
-                img.src = url;
-                document.getElementById('media_board').appendChild(img);
+                document.getElementById('img_board').appendChild(img);
 
-                uploadImage(capturedFile);
+                uploadImage(capturedFile, img);
+
+                var e = new HtmlElement();
+                e.control = img;
+                e.counter = counter;
+                list_html_element[list_html_element.length] = e;
+                counter++;
             }
         }, function (error) {
             console.log("Unable to invoke capture UI.");
         });
     }
 
-    function uploadImage(file) {
+    function uploadImage(file, img) {
         file.openAsync(Windows.Storage.FileAccessMode.readWrite).then(function (stream) {
             var blob = MSApp.createBlobFromRandomAccessStream(file.type, stream);
 
@@ -211,6 +247,8 @@
                 data: formData
             });
         }).then(function (request) {
+            var json = JSON.parse(request.responseText);
+            img.src = json.url;
             console.log('uploaded image okie');
         }, function (error) {
             console.error('problem uploading image');
@@ -219,7 +257,9 @@
         
     }
 
-    function loadPhoto() {
+    function HtmlElement() {
+        this.control = null;
+        this.counter = null;
+        this.uuid = null;
     }
-    
 })();

@@ -7,8 +7,13 @@
     var counter = 0;
     //Drop this after the line: var activation = Windows.ApplicationModel.Activation;
     var lastPosition = null;
-    var serverAddress = '192.168.4.169:3000';
+    var serverAddress = '192.168.33.35:3000';
     var map_open = false;
+
+    var socket = io.connect('http://192.168.9.111:3000/media');
+    socket.on('connect', function () {
+        socket.emit('media-subscribe', 'NAT611');
+    });
 
     WinJS.UI.Pages.define("/pages/board_detail/board_detail.html", {
         // This function is called whenever a user navigates to this page. It
@@ -50,6 +55,42 @@
             }
         });
     }
+
+    function processFrameEvent(message) {
+        //Verify data and origin (in this case the web context page)
+        if (!message.data || message.origin !== "ms-appx-web://" + document.location.host) {
+            return;
+        }
+        if (!message.data) {
+            return;
+        }
+        var eventObj = JSON.parse(message.data);
+        switch (eventObj.event) {
+            case "locationChanged":
+                var data = {
+                    type: 'map',
+                    x: eventObj.latitude,
+                    y: eventObj.longitude,
+                    rotation: 0,
+                    relativePoints: [],
+                    thickness: 0,
+                    color: null,
+                    counter: counter
+                };
+                lastPosition = { latitude: eventObj.latitude, longitude: eventObj.longitude };
+                break;
+            default:
+                break;
+        }
+    };
+
+    socket.on('media-server-update', function (data) {
+        if (data.type == "map") {
+            var location = { latitude: data.x, longitude: data.y };
+            callFrameScript(document.frames["map"], "pinLocation",
+                [data.x, data.y]);
+        }
+    });
 
     function videoHandler(e) {
 
