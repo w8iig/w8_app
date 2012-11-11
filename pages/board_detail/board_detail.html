@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>board_detail</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <script src ="/js/jquery-1.8.2.js"></script>
+    <script src ="/pages/board_detail/socket.io.js"></script>
+    <script src="/pages/board_detail/echo.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <link href="board_detail.css" rel="stylesheet" />
+    <script type="text/javascript" src="bingsdk.js"></script>
+    <script src="board_detail.js"></script>
+</head>
+<body>
+    <div id ="wrapper">
+
+        <div id="media_board">
+            <canvas id="pain_board"></canvas>
+            <iframe id="map" width="300px" height="300px"></iframe>
+        </div>
+
+        <div id ="chat">
+            <form class ="echo">
+                <input type ="text" id ="message">
+                <input type ="submit" name ="Send" value ="Send" id ="submit" />
+            </form>
+            <div id ="output"></div>
+        </div>
+
+    </div>
+
+    <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button id="photoBtn" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'Photo', icon:'photo'}"></button>
+        <button id="mapBtn" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'Map', icon:'map'}"></button>
+        <button id="videoBtn" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'Youtube', icon:'video'}"></button>
+    </div>
+    
+</body>
+</html>

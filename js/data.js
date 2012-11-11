@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
     
-    var serverAddress = '192.168.6.108:3000';
+    var serverAddress = '192.168.6.102:3000';
     var collectionsList = new WinJS.Binding.List();
     var boardsListsArray = [];
 
@@ -13,7 +13,9 @@
             fetchJson('http://' + serverAddress + '/api/collections').then(function (collections) {
                 if (collections != null) {
                     for (var i = 0; i < collections.length; i++) {
-                        collectionsList.push(collections[i]);
+                        var collection = collections[i];
+                        collection.thumbnail = 'http://' + serverAddress + '/collections/' + collections[i].collectionId + '/thumbnail';
+                        collectionsList.push(collection);
                     }
                 }
             });
@@ -34,7 +36,9 @@
             fetchJson('http://' + serverAddress + '/api/collections/' + collectionId).then(function (collection) {
                 if (collection != null && collection.boards) {
                     for (var i = 0; i < collection.boards.length; i++) {
-                        boardsListsArray[collectionId].push(collection.boards[i]);
+                        var board = collection.boards[i];
+                        board.thumbnail = 'http://' + serverAddress + '/boards/' + board.boardId + '/thumbnail';
+                        boardsListsArray[collectionId].push(board);
                     }
                 }
             });

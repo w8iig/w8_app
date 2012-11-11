@@ -53,7 +53,7 @@
         },
 
         _itemInvoked: function (args) {
-            WinJS.Navigation.navigate("/pages/board/board.html", { board: this.boardsList.getAt(args.detail.itemIndex) });
+            WinJS.Navigation.navigate("/pages/board_detail/board_detail.html", { board: this.boardsList.getAt(args.detail.itemIndex) });
         }
     });
 })();

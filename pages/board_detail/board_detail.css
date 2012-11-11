@@ -1,0 +1,22 @@
+﻿.board_detail p {
+    margin-left: 120px;
+}
+
+
+#media_board {
+    width : 1000px;
+    height: 1000px;
+    background : white;
+    float:left;
+    position:absolute;
+    overflow:hidden;
+}
+#chat {
+    width: 400px;
+    overflow:hidden;
+    height: 1000px;
+    background : blue;
+    margin-left: 1000px;
+    position:absolute;
+    padding : 10px 0px 10px 10px ;
+}
