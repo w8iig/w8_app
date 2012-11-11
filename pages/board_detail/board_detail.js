@@ -7,6 +7,7 @@
     var counter = 0;
     //Drop this after the line: var activation = Windows.ApplicationModel.Activation;
     var lastPosition = null;
+    var serverAddress = '192.168.6.102:3000';
     
     WinJS.UI.Pages.define("/pages/board_detail/board_detail.html", {
         // This function is called whenever a user navigates to this page. It
@@ -115,8 +116,11 @@
                     }
                 });
 
-                img.src = URL.createObjectURL(file, { oneTimeOnly: true });
+                var url = URL.createObjectURL(file, { oneTimeOnly: true });
+                img.src = url;
                 document.getElementById('media_board').appendChild(img);
+
+                uploadImage(file);
             } else {
                 // The picker was dismissed with no selected file
             }
@@ -144,15 +148,41 @@
                     }
                 });
                 
-                img.src = URL.createObjectURL(capturedFile, { oneTimeOnly: true });
+                var url = URL.createObjectURL(capturedFile, { oneTimeOnly: true });
+                img.src = url;
                 document.getElementById('media_board').appendChild(img);
+
+                uploadImage(capturedFile);
             }
         }, function (error) {
             console.log("Unable to invoke capture UI.");
         });
     }
 
-    function loadPhoto() {
+    function uploadImage(file) {
+        file.openAsync(Windows.Storage.FileAccessMode.readWrite).then(function (stream) {
+            var blob = MSApp.createBlobFromRandomAccessStream(file.type, stream);
+
+            var formData = new FormData();
+            formData.append('image', blob, file.name);
+
+            var url = 'http://' + serverAddress + '/api/media/image-upload';
+
+            return WinJS.xhr({
+                type: "POST",
+                url: url,
+                data: formData
+            });
+        }).then(function (request) {
+            console.log('uploaded image okie');
+        }, function (error) {
+            console.error('problem uploading image');
+        });
+
+        
     }
 
+    function loadPhoto() {
+    }
+    
 })();
