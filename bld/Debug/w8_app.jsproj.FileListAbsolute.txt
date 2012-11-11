@@ -1,0 +1,13 @@
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bin\Debug\resources.pri
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bin\Debug\AppxManifest.xml
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bin\Debug\w8_app.build.appxrecipe
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\priconfig.xml.intermediate
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\layout.resfiles.intermediate
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\resources.resfiles.intermediate
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\pri.resfiles.intermediate
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\priconfig.xml
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\layout.resfiles
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\resources.resfiles
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\pri.resfiles
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\LanguageQualifiers.txt
+H:\Users\Shrimp\Documents\GitHub\w8_app_2\bld\Debug\ProjectArchitectures.txt

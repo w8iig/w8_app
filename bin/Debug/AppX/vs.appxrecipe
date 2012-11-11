@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TOM</Machine>
+    <WindowsUser>Shrimp</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>0D24E659DA158E06BDEBF513AF7A99263FD17369E041E583A402A634DA6FCC04</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>1164f4ca-2bcc-4ce5-a797-0b4fd2d5b4b6_1.0.0.0_neutral__m59fryp8n8ksr</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>1164f4ca-2bcc-4ce5-a797-0b4fd2d5b4b6_m59fryp8n8ksr!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>1164f4ca-2bcc-4ce5-a797-0b4fd2d5b4b6</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=HoangManhHa1991</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-11T09:16:57.430</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\css\custom.css">
+      <PackagePath>css\custom.css</PackagePath>
+      <Modified>2012-11-11T09:10:47.350</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-11-11T09:09:55.406</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\css\items.css">
+      <PackagePath>css\items.css</PackagePath>
+      <Modified>2012-11-11T08:50:05.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\board_detail.css">
+      <PackagePath>pages\board_detail\board_detail.css</PackagePath>
+      <Modified>2012-11-11T09:20:59.955</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\split\split.css">
+      <PackagePath>pages\split\split.css</PackagePath>
+      <Modified>2012-11-11T08:50:05.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\chat_background.jpg">
+      <PackagePath>images\chat_background.jpg</PackagePath>
+      <Modified>2012-11-11T09:15:29.859</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-11T08:49:26.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-11T08:49:26.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles13.png">
+      <PackagePath>images\smiles13.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles14.png">
+      <PackagePath>images\smiles14.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles16.png">
+      <PackagePath>images\smiles16.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles18.png">
+      <PackagePath>images\smiles18.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles19.png">
+      <PackagePath>images\smiles19.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles21.png">
+      <PackagePath>images\smiles21.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles22.png">
+      <PackagePath>images\smiles22.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles25.png">
+      <PackagePath>images\smiles25.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles27.png">
+      <PackagePath>images\smiles27.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles28.png">
+      <PackagePath>images\smiles28.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles30.png">
+      <PackagePath>images\smiles30.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles31.png">
+      <PackagePath>images\smiles31.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles32.png">
+      <PackagePath>images\smiles32.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles33.png">
+      <PackagePath>images\smiles33.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles34.png">
+      <PackagePath>images\smiles34.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles35.png">
+      <PackagePath>images\smiles35.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles36.png">
+      <PackagePath>images\smiles36.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles37.png">
+      <PackagePath>images\smiles37.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles39.png">
+      <PackagePath>images\smiles39.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles40.png">
+      <PackagePath>images\smiles40.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles41.png">
+      <PackagePath>images\smiles41.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles42.png">
+      <PackagePath>images\smiles42.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles43.png">
+      <PackagePath>images\smiles43.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles44.png">
+      <PackagePath>images\smiles44.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles45.png">
+      <PackagePath>images\smiles45.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles46.png">
+      <PackagePath>images\smiles46.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles47.png">
+      <PackagePath>images\smiles47.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles48.png">
+      <PackagePath>images\smiles48.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles49.png">
+      <PackagePath>images\smiles49.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles51.png">
+      <PackagePath>images\smiles51.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles54.png">
+      <PackagePath>images\smiles54.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles55.png">
+      <PackagePath>images\smiles55.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles56.png">
+      <PackagePath>images\smiles56.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles57.png">
+      <PackagePath>images\smiles57.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles58.png">
+      <PackagePath>images\smiles58.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles59.png">
+      <PackagePath>images\smiles59.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles60.png">
+      <PackagePath>images\smiles60.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles62.png">
+      <PackagePath>images\smiles62.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles63.png">
+      <PackagePath>images\smiles63.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles64.png">
+      <PackagePath>images\smiles64.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles65.png">
+      <PackagePath>images\smiles65.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles66.png">
+      <PackagePath>images\smiles66.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles67.png">
+      <PackagePath>images\smiles67.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles68.png">
+      <PackagePath>images\smiles68.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles70.png">
+      <PackagePath>images\smiles70.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles71.png">
+      <PackagePath>images\smiles71.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles72.png">
+      <PackagePath>images\smiles72.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles74.png">
+      <PackagePath>images\smiles74.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles75.png">
+      <PackagePath>images\smiles75.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles76.png">
+      <PackagePath>images\smiles76.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles78.png">
+      <PackagePath>images\smiles78.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles79.png">
+      <PackagePath>images\smiles79.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles80.png">
+      <PackagePath>images\smiles80.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles81.png">
+      <PackagePath>images\smiles81.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles82.png">
+      <PackagePath>images\smiles82.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles83.png">
+      <PackagePath>images\smiles83.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\smiles90.png">
+      <PackagePath>images\smiles90.png</PackagePath>
+      <Modified>2012-11-11T08:56:12.987</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-11T08:49:26.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-11T08:49:26.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\data.js">
+      <PackagePath>js\data.js</PackagePath>
+      <Modified>2012-11-11T09:23:09.597</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-11-11T08:50:05.061</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\jquery-1.8.2.js">
+      <PackagePath>js\jquery-1.8.2.js</PackagePath>
+      <Modified>2012-11-11T08:56:13.050</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\jquery-ui.js">
+      <PackagePath>js\jquery-ui.js</PackagePath>
+      <Modified>2012-11-11T08:56:13.113</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\js\navigator.js">
+      <PackagePath>js\navigator.js</PackagePath>
+      <Modified>2012-11-11T08:49:26.809</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\boards\boards.js">
+      <PackagePath>pages\boards\boards.js</PackagePath>
+      <Modified>2012-11-11T08:56:13.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\bingsdk.js">
+      <PackagePath>pages\board_detail\bingsdk.js</PackagePath>
+      <Modified>2012-11-11T08:56:13.113</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\board_detail.js">
+      <PackagePath>pages\board_detail\board_detail.js</PackagePath>
+      <Modified>2012-11-11T09:32:35.997</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\echo.js">
+      <PackagePath>pages\board_detail\echo.js</PackagePath>
+      <Modified>2012-11-11T08:56:13.128</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\map.js">
+      <PackagePath>pages\board_detail\map.js</PackagePath>
+      <Modified>2012-11-11T09:01:25.441</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\socket.io.js">
+      <PackagePath>pages\board_detail\socket.io.js</PackagePath>
+      <Modified>2012-11-11T08:56:13.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\collections\collections.js">
+      <PackagePath>pages\collections\collections.js</PackagePath>
+      <Modified>2012-11-11T08:50:05.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\split\split.js">
+      <PackagePath>pages\split\split.js</PackagePath>
+      <Modified>2012-11-11T08:50:05.108</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\boards\boards.html">
+      <PackagePath>pages\boards\boards.html</PackagePath>
+      <Modified>2012-11-11T08:56:13.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\board_detail.html">
+      <PackagePath>pages\board_detail\board_detail.html</PackagePath>
+      <Modified>2012-11-11T09:32:20.027</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\board_detail\map.html">
+      <PackagePath>pages\board_detail\map.html</PackagePath>
+      <Modified>2012-11-11T09:09:05.565</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\collections\collections.html">
+      <PackagePath>pages\collections\collections.html</PackagePath>
+      <Modified>2012-11-11T08:56:13.144</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\pages\split\split.html">
+      <PackagePath>pages\split\split.html</PackagePath>
+      <Modified>2012-11-11T08:50:05.108</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2012-11-11T08:50:05.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\Users\Shrimp\Documents\GitHub\w8_app_2\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-11-11T09:16:57.367</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="H:\Program Files (x86)\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.9200.20512</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.9200.20512</FrameworkIdentity>
+      <AppxLocation>H:\Program Files (x86)\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

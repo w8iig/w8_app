@@ -53,8 +53,10 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="css\custom.css" />
     <Content Include="css\default.css" />
     <Content Include="css\items.css" />
+    <Content Include="images\chat_background.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\smiles13.png" />
